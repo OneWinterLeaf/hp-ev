@@ -6,6 +6,8 @@ It will also try to capture shinies by throwing pokéballs.
 Start anywhere between Violet City and Ruins of Alph.]]
 
 function onPathAction()
+    if isPrivateMessageEnabled() then
+return disablePrivateMessage() end
     if isPokemonUsable(1) then
         if getMapName() == "Pokecenter Violet City" then
             moveToMap("Violet City")
